@@ -224,7 +224,7 @@
           <maml:name>System.IO.FileInfo</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para>`Join-File` returns a `FileInfo` object representing a file path.</maml:para>
+          <maml:para>`Join-File` returns a FileInfo object representing a file path.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -519,7 +519,7 @@ Mode                 LastWriteTime         Length Name
           <maml:name>System.IO.FileInfo</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para>`Split-File` returns a `FileInfo` object representing a file path.</maml:para>
+          <maml:para>`Split-File` returns a FileInfo object representing a file path.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>

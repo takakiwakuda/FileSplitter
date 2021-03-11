@@ -158,7 +158,7 @@ You can pipe a string that contains a file path to `Join-File`.
 
 ### System.IO.FileInfo
 
-`Join-File` returns a `FileInfo` object representing a file path.
+`Join-File` returns a FileInfo object representing a file path.
 
 ## NOTES
 

@@ -178,7 +178,7 @@ You can pipe a string that contains a file path to `Split-File`.
 
 ### System.IO.FileInfo
 
-`Split-File` returns a `FileInfo` object representing a file path.
+`Split-File` returns a FileInfo object representing a file path.
 
 ## NOTES
 
