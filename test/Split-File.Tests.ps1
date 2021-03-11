@@ -1,4 +1,6 @@
-﻿$ModuleRoot = Split-Path -LiteralPath $PSScriptRoot -Resolve
+﻿Set-StrictMode -Version 3.0
+
+$ModuleRoot = Split-Path -LiteralPath $PSScriptRoot -Resolve
 
 Import-Module -Name $ModuleRoot -Force
 
