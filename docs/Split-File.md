@@ -8,30 +8,43 @@ schema: 2.0.0
 # Split-File
 
 ## SYNOPSIS
+
 Splits a file into multiple files.
 
 ## SYNTAX
 
 ### Path (Default)
-```
+
+```powershell
 Split-File [-Path] <String> [[-Destination] <String>] [-Size] <Int32> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ### LiteralPath
-```
+
+```powershell
 Split-File -LiteralPath <String> [[-Destination] <String>] [-Size] <Int32> [-Force] [-WhatIf] [-Confirm]
  [<CommonParameters>]
 ```
 
 ## DESCRIPTION
+
 The `Split-File` cmdlet splits a file into multiple files.
 
 ## EXAMPLES
 
 ### Example 1
+
 ```powershell
 PS C:\> Split-File -Path "C:\Foo.txt" -Destination "C:\Parts" -Size 10MB
+
+
+    Directory: C:\Parts
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          2021/03/01    12:00       10485760 Foo.txt.000
+-a---          2021/03/01    12:00       10485760 Foo.txt.001
 ```
 
 This example splits the file into multiple files of 10MB each.
@@ -39,6 +52,7 @@ This example splits the file into multiple files of 10MB each.
 ## PARAMETERS
 
 ### -Confirm
+
 Prompts you for confirmation before running the cmdlet.
 
 ```yaml
@@ -54,6 +68,7 @@ Accept wildcard characters: False
 ```
 
 ### -Destination
+
 Specifies the path to the location where the file is written.
 
 ```yaml
@@ -63,12 +78,13 @@ Aliases:
 
 Required: False
 Position: 1
-Default value: None
+Default value: .
 Accept pipeline input: False
 Accept wildcard characters: False
 ```
 
 ### -Force
+
 Overwrites files that already exists. By default, `Split-File` does not overwrite files.
 
 ```yaml
@@ -84,6 +100,7 @@ Accept wildcard characters: False
 ```
 
 ### -LiteralPath
+
 Specifies the path to the location.
 
 ```yaml
@@ -99,6 +116,7 @@ Accept wildcard characters: False
 ```
 
 ### -Path
+
 Specifies the path to the location. Wildcards are permitted.
 
 ```yaml
@@ -114,6 +132,7 @@ Accept wildcard characters: True
 ```
 
 ### -Size
+
 Specifies the split size of files.
 
 ```yaml
@@ -129,6 +148,7 @@ Accept wildcard characters: False
 ```
 
 ### -WhatIf
+
 Shows what would happen if the cmdlet runs.
 The cmdlet is not run.
 
@@ -145,17 +165,20 @@ Accept wildcard characters: False
 ```
 
 ### CommonParameters
+
 This cmdlet supports the common parameters: -Debug, -ErrorAction, -ErrorVariable, -InformationAction, -InformationVariable, -OutVariable, -OutBuffer, -PipelineVariable, -Verbose, -WarningAction, and -WarningVariable. For more information, see [about_CommonParameters](http://go.microsoft.com/fwlink/?LinkID=113216).
 
 ## INPUTS
 
 ### System.String
+
 You can pipe a string that contains a file path to `Split-File`.
 
 ## OUTPUTS
 
 ### System.IO.FileInfo
-`Split-File` returns a FileInfo object representing a file path.
+
+`Split-File` returns a `FileInfo` object representing a file path.
 
 ## NOTES
 

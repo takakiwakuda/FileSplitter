@@ -211,7 +211,7 @@
     <command:inputTypes>
       <command:inputType>
         <dev:type>
-          <maml:name>System.String[]</maml:name>
+          <maml:name>System.String</maml:name>
         </dev:type>
         <maml:description>
           <maml:para>You can pipe a string that contains a file path to `Join-File`.</maml:para>
@@ -224,7 +224,7 @@
           <maml:name>System.IO.FileInfo</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para>`Join-File` returns a FileInfo object representing a file path.</maml:para>
+          <maml:para>`Join-File` returns a `FileInfo` object representing a file path.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -236,7 +236,13 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; Join-File -Path "C:\Parts\Foo.txt.000", "C:\Parts\Foo.txt001" -Destination "C:\Foo.txt"</dev:code>
+        <dev:code>PS C:\&gt; Join-File -Path "C:\Parts\Foo.txt.000", "C:\Parts\Foo.txt001" -Destination "C:\Foo.txt"
+
+    Directory: C:\
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          2021/03/01    12:00       20971520 Foo.txt</dev:code>
         <dev:remarks>
           <maml:para>This example concatenates multiple files into one file.</maml:para>
         </dev:remarks>
@@ -278,7 +284,7 @@
             <maml:name>String</maml:name>
             <maml:uri />
           </dev:type>
-          <dev:defaultValue>None</dev:defaultValue>
+          <dev:defaultValue>.</dev:defaultValue>
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
           <maml:name>Size</maml:name>
@@ -362,7 +368,7 @@
             <maml:name>String</maml:name>
             <maml:uri />
           </dev:type>
-          <dev:defaultValue>None</dev:defaultValue>
+          <dev:defaultValue>.</dev:defaultValue>
         </command:parameter>
         <command:parameter required="true" variableLength="true" globbing="false" pipelineInput="False" position="2" aliases="none">
           <maml:name>Size</maml:name>
@@ -434,7 +440,7 @@
           <maml:name>String</maml:name>
           <maml:uri />
         </dev:type>
-        <dev:defaultValue>None</dev:defaultValue>
+        <dev:defaultValue>.</dev:defaultValue>
       </command:parameter>
       <command:parameter required="false" variableLength="true" globbing="false" pipelineInput="False" position="named" aliases="none">
         <maml:name>Force</maml:name>
@@ -513,7 +519,7 @@
           <maml:name>System.IO.FileInfo</maml:name>
         </dev:type>
         <maml:description>
-          <maml:para>`Split-File` returns a FileInfo object representing a file path.</maml:para>
+          <maml:para>`Split-File` returns a `FileInfo` object representing a file path.</maml:para>
         </maml:description>
       </command:returnValue>
     </command:returnValues>
@@ -525,7 +531,15 @@
     <command:examples>
       <command:example>
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
-        <dev:code>PS C:\&gt; Split-File -Path "C:\Foo.txt" -Destination "C:\Parts" -Size 10MB</dev:code>
+        <dev:code>PS C:\&gt; Split-File -Path "C:\Foo.txt" -Destination "C:\Parts" -Size 10MB
+
+
+    Directory: C:\Parts
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a---          2021/03/01    12:00       10485760 Foo.txt.000
+-a---          2021/03/01    12:00       10485760 Foo.txt.001</dev:code>
         <dev:remarks>
           <maml:para>This example splits the file into multiple files of 10MB each.</maml:para>
         </dev:remarks>
