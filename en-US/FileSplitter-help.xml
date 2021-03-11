@@ -533,7 +533,6 @@ Mode                 LastWriteTime         Length Name
         <maml:title>-------------------------- Example 1 --------------------------</maml:title>
         <dev:code>PS C:\&gt; Split-File -Path "C:\Foo.txt" -Destination "C:\Parts" -Size 10MB
 
-
     Directory: C:\Parts
 
 Mode                 LastWriteTime         Length Name

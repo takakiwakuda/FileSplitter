@@ -38,7 +38,6 @@ The `Split-File` cmdlet splits a file into multiple files.
 ```powershell
 PS C:\> Split-File -Path "C:\Foo.txt" -Destination "C:\Parts" -Size 10MB
 
-
     Directory: C:\Parts
 
 Mode                 LastWriteTime         Length Name
